@@ -23,10 +23,15 @@ body {
 #random-number {
     display: flex;
 }
+#user-choise {
+    display: flex;
+}
 .box__number {
     font-size: 1.875rem;
     font-weight: bold;
-    padding: 1.25rem;
+    text-align: center;
+    width: 6.25rem;
+    padding: 1.25rem 0;
     border: .125rem solid green;
     background-color: aquamarine;
 }
