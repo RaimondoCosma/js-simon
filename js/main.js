@@ -54,15 +54,31 @@ setTimeout(function(){
     arrow.classList.add('show');
     // Creo funzione relativa al banner
     const banner = document.getElementById('banner');
-    if ( pcNumbers.includes(userRandomNumber) ){
-        banner.innerHTML = `<div style="background-color: blue;padding: .625rem 1.875rem;color: white;font-weight: bold;">Complimenti hai indovinato tutti i numeri</div>`
-    } else {
-        banner.innerHTML = `<div style="background-color: red;padding: .625rem 1.875rem;color: white;font-weight: bold;">Mi dispiace i numeri non corrispondono</div>`
+    // Creo le condizioni di vittoria
+    let i = pcNumbers.length;
+    while (i--) {
+        if (pcNumbers[i] !== userNumbers[i]) {
+            banner.innerHTML = `<div style="background-color: red;padding: .625rem 1.875rem;color: white;font-weight: bold;">Mi dispiace i numeri non corrispondono</div>`
+        } else {
+            banner.innerHTML = `<div style="background-color: blue;padding: .625rem 1.875rem;color: white;font-weight: bold;">Complimenti hai indovinato tutti i numeri</div>`
+        }
     }
     randomNumbers.classList.remove('hide');
 },30500)
 console.log(userNumbers);
 
+// Dichiaro variabile associata al countdown del DOM
+const countDown = document.querySelector('.countdown');
+
+// Imposto un countdown per il tempo a disposizione a memorizzare i numeri
+let i = 29;
+const timer = setInterval(function(){
+    countDown.innerHTML = `<div style="font-size: 28px; font-weight: bold; text-align: center;">${i}</div>`;
+    i--
+    if ( i === -1 ){
+        clearInterval(timer);
+    }
+},1000)
 
 
 
