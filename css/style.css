@@ -26,6 +26,15 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 62.5rem;
+    min-width: 53.125rem;
+    margin: auto;
+}
+h1 {
+    position: absolute;
+    top: -3.125rem;
+    left: 50%;
+    transform: translateX(-50%);;
 }
 .arrow {
     text-align: center;
@@ -36,14 +45,16 @@ main {
 }
 #random-number {
     display: flex;
+    box-shadow: 11px 12px 30px 3px #1D2F0C;
 }
 #user-choise {
     display: flex;
     text-align: center;
+    box-shadow: 11px 12px 30px 3px #1D2F0C;
 }
 #banner {
     position: absolute;
-    left: 5%;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     padding: .625rem 1.875rem;

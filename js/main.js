@@ -60,7 +60,7 @@ setTimeout(function(){
         banner.innerHTML = `<div style="background-color: red;padding: .625rem 1.875rem;color: white;font-weight: bold;">Mi dispiace i numeri non corrispondono</div>`
     }
     randomNumbers.classList.remove('hide');
-},31000)
+},30500)
 console.log(userNumbers);
 
 
