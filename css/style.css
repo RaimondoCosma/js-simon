@@ -1,0 +1,32 @@
+/* ----------------
+    RESET
+---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------
+    COMMON
+---------------- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ----------------
+    MAIN
+---------------- */
+#random-number {
+    display: flex;
+}
+.box__number {
+    font-size: 1.875rem;
+    font-weight: bold;
+    padding: 1.25rem;
+    border: .125rem solid green;
+    background-color: aquamarine;
+}
