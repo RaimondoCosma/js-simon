@@ -20,11 +20,35 @@ body {
 /* ----------------
     MAIN
 ---------------- */
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.arrow {
+    text-align: center;
+    font-size: 3.25rem;
+    width: 100%;
+    margin: 1.25rem 0;
+    opacity: 0;
+}
 #random-number {
     display: flex;
 }
 #user-choise {
     display: flex;
+    text-align: center;
+}
+#banner {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .625rem 1.875rem;
+    color: white;
+    font-weight: bold;
 }
 .box__number {
     font-size: 1.875rem;
@@ -37,4 +61,8 @@ body {
 }
 .hide {
     opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.show {
+    opacity: 1;
 }

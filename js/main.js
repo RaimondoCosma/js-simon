@@ -28,7 +28,7 @@ console.log(pcNumbers);
 // Imposto il timeout relativo alla scomparsa dei numeri del pc
 setTimeout(function(){
     randomNumbers.classList.add('hide');
-},4000)
+},30000)
 
 // Creo funzione relativa al #user-choise del mio DOM
 const userChoise = document.getElementById('user-choise');
@@ -49,12 +49,18 @@ setTimeout(function(){
         userChoise.append(numberItem);
         numberItem.append(userRandomNumber);            
     }
+    // Creo funzione relativa alla freccia
+    const arrow = document.querySelector('.arrow');
+    arrow.classList.add('show');
+    // Creo funzione relativa al banner
+    const banner = document.getElementById('banner');
     if ( pcNumbers.includes(userRandomNumber) ){
-        alert('Complimenti hai vinto');
+        banner.innerHTML = `<div style="background-color: blue;padding: .625rem 1.875rem;color: white;font-weight: bold;">Complimenti hai indovinato tutti i numeri</div>`
     } else {
-        alert('Bottoni');
+        banner.innerHTML = `<div style="background-color: red;padding: .625rem 1.875rem;color: white;font-weight: bold;">Mi dispiace i numeri non corrispondono</div>`
     }
-},6000)
+    randomNumbers.classList.remove('hide');
+},31000)
 console.log(userNumbers);
 
 
