@@ -4,7 +4,7 @@
 ---------------------*/
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
-  }
+}
 
   /*---------------------
     MAIN
@@ -16,12 +16,12 @@ let pcNumbers = [];
 while ( pcNumbers.length < 5 ){
     let random = getRndInteger(1, 100)
     if ( !pcNumbers.includes(random) ){
+        let numberItem = document.createElement('div');
+        numberItem.classList.add('box__number');
+        randomNumbers.append(numberItem);
         pcNumbers.push(random);
+        numberItem.append(random);
     }
-    let numberItem = document.createElement('div');
-    numberItem.classList.add('box__number');
-    randomNumbers.append(numberItem);
-    numberItem.append(random);
 }
 console.log(pcNumbers);
 
