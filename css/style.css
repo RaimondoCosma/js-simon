@@ -30,3 +30,6 @@ body {
     border: .125rem solid green;
     background-color: aquamarine;
 }
+.hide {
+    opacity: 0;
+}

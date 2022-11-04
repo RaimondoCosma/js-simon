@@ -24,3 +24,15 @@ while ( pcNumbers.length < 5 ){
     numberItem.append(random);
 }
 console.log(pcNumbers);
+
+// Imposto il timeout relativo alla scomparsa dei numeri del pc
+setTimeout(function(){
+    randomNumbers.classList.add('hide');
+},4000)
+
+// Imposto il timeout relativo alla comparsa dei prompt
+setTimeout(function(){
+    for ( let i = 0; i < 5; i++ ){
+        Number(prompt(`Inserisci un numero - ${i + 1} di 5:`));
+    }
+},6000)
