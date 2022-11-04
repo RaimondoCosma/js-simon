@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: linear-gradient(to right top, #030b16, #212041, #5b265f, #9f1c63, #da1d4b);
 }
 
 /* ----------------
