@@ -30,9 +30,19 @@ setTimeout(function(){
     randomNumbers.classList.add('hide');
 },4000)
 
+// Creo un nuovo array per inserire i numeri selezionati dall'utente
+let userNumbers = [];
+
 // Imposto il timeout relativo alla comparsa dei prompt
+let userRandomNumber;
 setTimeout(function(){
     for ( let i = 0; i < 5; i++ ){
-        Number(prompt(`Inserisci un numero - ${i + 1} di 5:`));
+        userRandomNumber = Number((prompt(`Inserisci un numero - ${i + 1} di 5:`)));
+        userNumbers.push(userRandomNumber);
     }
 },6000)
+// Inserisco i numeri dell'utente dentro l'array appena creato
+console.log(userNumbers);
+
+
+
