@@ -49,8 +49,14 @@ setTimeout(function(){
         userChoise.append(numberItem);
         numberItem.append(userRandomNumber);            
     }
+    if ( pcNumbers.includes(userRandomNumber) ){
+        alert('Complimenti hai vinto');
+    } else {
+        alert('Bottoni');
+    }
 },6000)
 console.log(userNumbers);
+
 
 
 
