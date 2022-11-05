@@ -28,7 +28,7 @@ console.log(pcNumbers);
 // Imposto il timeout relativo alla scomparsa dei numeri del pc
 setTimeout(function(){
     randomNumbers.classList.add('hide');
-},5000)
+},30000)
 
 // Creo funzione relativa al #user-choise del mio DOM
 const userChoise = document.getElementById('user-choise');
@@ -70,21 +70,21 @@ setTimeout(function(){
             }
         }
     randomNumbers.classList.remove('hide');
-},5500)
+},30500)
 console.log(userNumbers);
 
 // Dichiaro variabile associata al countdown del DOM
 const countDown = document.querySelector('.countdown');
 
 // Imposto un countdown per il tempo a disposizione a memorizzare i numeri
-// let i = 29;
-// const timer = setInterval(function(){
-//     countDown.innerHTML = `<div style="font-size: 28px; font-weight: bold; text-align: center;">${i}</div>`;
-//     i--
-//     if ( i === -1 ){
-//         clearInterval(timer);
-//     }
-// },1000)
+let i = 29;
+const timer = setInterval(function(){
+    countDown.innerHTML = `<div style="font-size: 28px; font-weight: bold; text-align: center;">${i}</div>`;
+    i--
+    if ( i === -1 ){
+        clearInterval(timer);
+    }
+},1000)
 
 
 
