@@ -28,7 +28,7 @@ console.log(pcNumbers);
 // Imposto il timeout relativo alla scomparsa dei numeri del pc
 setTimeout(function(){
     randomNumbers.classList.add('hide');
-},30000)
+},5000)
 
 // Creo funzione relativa al #user-choise del mio DOM
 const userChoise = document.getElementById('user-choise');
@@ -55,30 +55,36 @@ setTimeout(function(){
     // Creo funzione relativa al banner
     const banner = document.getElementById('banner');
     // Creo le condizioni di vittoria
-    let i = pcNumbers.length;
-    while (i--) {
-        if (pcNumbers[i] !== userNumbers[i]) {
+        if (pcNumbers.join() !== userNumbers.join()) {
             banner.innerHTML = `<div style="background-color: red;padding: .625rem 1.875rem;color: white;font-weight: bold;">Mi dispiace i numeri non corrispondono</div>`
+            console.log(pcNumbers.join(), userNumbers.join())
         } else {
             banner.innerHTML = `<div style="background-color: blue;padding: .625rem 1.875rem;color: white;font-weight: bold;">Complimenti hai indovinato tutti i numeri</div>`
         }
-    }
+        let i = pcNumbers.length
+        while ( i-- ){
+            if ( pcNumbers[i] !== userNumbers[i] ){
+                console.log(`Numero sbagliato: Numero PC: ${pcNumbers[i]} - Il tuo Numero: ${userNumbers[i]}`)
+            } else {
+                console.log(`Numero giusto: Numero PC: ${pcNumbers[i]} - Il tuo Numero: ${userNumbers[i]}`)
+            }
+        }
     randomNumbers.classList.remove('hide');
-},30500)
+},5500)
 console.log(userNumbers);
 
 // Dichiaro variabile associata al countdown del DOM
 const countDown = document.querySelector('.countdown');
 
 // Imposto un countdown per il tempo a disposizione a memorizzare i numeri
-let i = 29;
-const timer = setInterval(function(){
-    countDown.innerHTML = `<div style="font-size: 28px; font-weight: bold; text-align: center;">${i}</div>`;
-    i--
-    if ( i === -1 ){
-        clearInterval(timer);
-    }
-},1000)
+// let i = 29;
+// const timer = setInterval(function(){
+//     countDown.innerHTML = `<div style="font-size: 28px; font-weight: bold; text-align: center;">${i}</div>`;
+//     i--
+//     if ( i === -1 ){
+//         clearInterval(timer);
+//     }
+// },1000)
 
 
 
