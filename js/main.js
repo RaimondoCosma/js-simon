@@ -57,10 +57,10 @@ setTimeout(function(){
     // Creo le condizioni di vittoria
         if (pcNumbers.join() !== userNumbers.join()) {
             banner.innerHTML = `<div style="background-color: red;padding: .625rem 1.875rem;color: white;font-weight: bold;">Mi dispiace i numeri non corrispondono</div>`
-            console.log(pcNumbers.join(), userNumbers.join())
         } else {
             banner.innerHTML = `<div style="background-color: blue;padding: .625rem 1.875rem;color: white;font-weight: bold;">Complimenti hai indovinato tutti i numeri</div>`
         }
+        console.log(`Numeri da indovinare: ${pcNumbers.join()} --> Numeri inseriti dall'utente: ${userNumbers.join()}`);
         let i = pcNumbers.length
         while ( i-- ){
             if ( pcNumbers[i] !== userNumbers[i] ){
